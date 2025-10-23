@@ -1,1 +1,1 @@
-Add model classes (NewsModel, JobModel, GuideModel) here.
+Add model classes here.

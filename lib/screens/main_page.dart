@@ -6,14 +6,12 @@ import 'guides_screen.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
-
   @override
   State<MainPage> createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
-
   final List<Widget> _screens = const [
     HomeScreen(),
     NewsScreen(),
@@ -21,11 +19,7 @@ class _MainPageState extends State<MainPage> {
     GuidesScreen(),
   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+  void _onTap(int index) => setState(() => _selectedIndex = index);
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +27,7 @@ class _MainPageState extends State<MainPage> {
       body: SafeArea(child: _screens[_selectedIndex]),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+        onTap: _onTap,
         backgroundColor: const Color(0xFF0D47A1),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white70,

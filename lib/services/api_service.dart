@@ -1,31 +1,55 @@
 import 'dart:async';
 
 class ApiService {
-  Future<List<Map<String, String>>> fetchNews() async {
+  Future<List<Map<String, dynamic>>> fetchNews() async {
     await Future.delayed(const Duration(milliseconds: 600));
     return [
-      {'title': 'UNHCR Launches New Initiative', 'description': 'Helping refugees integrate through new education programs.'},
-      {'title': 'Food Support Update', 'description': 'WFP provides food aid to 10,000 families this month.'},
+      {
+        'title': 'UNHCR launches education program',
+        'description': 'New education initiative to help refugee children attend school.',
+        'image': 'https://picsum.photos/seed/news1/800/400'
+      },
+      {
+        'title': 'Food support updates',
+        'description': 'WFP scales up food distribution to remote settlements.',
+        'image': 'https://picsum.photos/seed/news2/800/400'
+      }
     ];
   }
 
-  Future<List<Map<String, String>>> fetchJobs() async {
+  Future<List<Map<String, dynamic>>> fetchJobs() async {
     await Future.delayed(const Duration(milliseconds: 600));
     return [
-      {'title': 'Teacher Assistant', 'description': 'Support refugee education programs in local centers.'},
-      {'title': 'Community Health Worker', 'description': 'Provide healthcare support in refugee camps.'},
+      {
+        'title': 'Teacher Assistant',
+        'description': 'Support refugee education programs in local centers.',
+        'image': 'https://picsum.photos/seed/job1/800/400'
+      },
+      {
+        'title': 'Community Health Worker',
+        'description': 'Provide healthcare support in refugee camps.',
+        'image': 'https://picsum.photos/seed/job2/800/400'
+      }
     ];
   }
 
-  Future<List<Map<String, String>>> fetchGuides() async {
+  Future<List<Map<String, dynamic>>> fetchGuides() async {
     await Future.delayed(const Duration(milliseconds: 600));
     return [
-      {'title': 'How to Apply for Refugee Status', 'description': 'Step-by-step process for refugee status application.'},
-      {'title': 'Legal Aid for Refugees', 'description': 'Find free legal assistance and advocacy organizations.'},
+      {
+        'title': 'How to apply for refugee status',
+        'description': 'Step-by-step process for refugee status application.',
+        'image': 'https://picsum.photos/seed/guide1/800/400'
+      },
+      {
+        'title': 'Legal aid for refugees',
+        'description': 'Find free legal assistance and advocacy organizations.',
+        'image': 'https://picsum.photos/seed/guide2/800/400'
+      }
     ];
   }
 
-  Future<List<Map<String, String>>> fetchCombinedFeed() async {
+  Future<List<Map<String, dynamic>>> fetchCombinedFeed() async {
     final news = await fetchNews();
     final jobs = await fetchJobs();
     final guides = await fetchGuides();
@@ -36,4 +60,3 @@ class ApiService {
     ];
   }
 }
-// will late and the images 
