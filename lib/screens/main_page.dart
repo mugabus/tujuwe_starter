@@ -24,21 +24,24 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: _screens[_selectedIndex]),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _onTap,
-        backgroundColor: const Color(0xFF0D47A1),
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white70,
-        type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.article), label: 'News'),
-          BottomNavigationBarItem(icon: Icon(Icons.work), label: 'Jobs'),
-          BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Guides'),
-        ],
-      ),
-    );
+  body: SafeArea(child: _screens[_selectedIndex]),
+  bottomNavigationBar: BottomNavigationBar(
+    currentIndex: _selectedIndex,
+    onTap: _onTap,
+    backgroundColor: Colors.white, // White background
+    selectedItemColor: const Color(0xFF0D47A1), // Deep blue active icon
+    unselectedItemColor: Colors.blueGrey, // Muted blue-gray inactive icon
+    type: BottomNavigationBarType.fixed,
+    showUnselectedLabels: true,
+    elevation: 10,
+    items: const [
+      BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+      BottomNavigationBarItem(icon: Icon(Icons.article), label: 'News'),
+      BottomNavigationBarItem(icon: Icon(Icons.work), label: 'Jobs'),
+      BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Guides'),
+    ],
+  ),
+);
+
   }
 }
