@@ -15,7 +15,7 @@ class _NewsScreenState extends State<NewsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('News'), backgroundColor: const Color(0xFF0D47A1)),
+       // will add some title and space
       body: FutureBuilder<List<Map<String, dynamic>>>(
         future: api.fetchNews(),
         builder: (context, snapshot) {
