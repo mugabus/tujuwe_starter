@@ -15,7 +15,7 @@ class _JobsScreenState extends State<JobsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Jobs'), backgroundColor: const Color(0xFF0D47A1)),
+     // will add some title and space
       body: FutureBuilder<List<Map<String, dynamic>>>(
         future: api.fetchJobs(),
         builder: (context, snapshot) {
