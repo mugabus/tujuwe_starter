@@ -13,6 +13,11 @@ class ApiService {
         'title': 'Food support updates',
         'description': 'WFP scales up food distribution to remote settlements.',
         'image': 'https://picsum.photos/seed/news2/800/400'
+      },
+      {
+        'title': 'Food support updates',
+        'description': 'WFP scales up food distribution to remote settlements.',
+        'image': 'https://picsum.photos/seed/news2/800/400'
       }
     ];
   }
