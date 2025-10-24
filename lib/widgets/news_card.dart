@@ -16,6 +16,7 @@ class NewsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 260,
+      height: 260,
       margin: const EdgeInsets.only(right: 12),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -63,7 +64,7 @@ class NewsCard extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     color: Colors.black87,
                   ),
-                  maxLines: 2,
+                  maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
               ],

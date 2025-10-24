@@ -86,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
 
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 40),
 
                   // Grid for Jobs and Guides
                   const Text(
